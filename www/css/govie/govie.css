@@ -1,0 +1,60 @@
+.govie-red {
+    background-color: #fc3159;
+}
+
+.govie-black {
+    color: #25272a;
+}
+
+.govie-gray {
+    color: #aaaaaa;
+}
+
+.govie-green {
+    color: #00da38;
+}
+
+.govie-light-blue {
+    color: #36c1ff;
+}
+
+.govie-blue {
+    color: #125688;
+}
+
+.govie-white {
+    color: #fffbd6;
+}
+
+.govie-transparent {
+    opacity: 65;
+}
+
+.govie-beige {
+    color: #dedcbf;
+}
+
+.govie-splashscreen {
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+    display: none;
+}
+
+.govie-login {
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+    display: none;
+}
+
+.govie-fill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.govie-padded {
+    padding-top: 30px;
+}
+
