@@ -3,7 +3,10 @@ var govie = govie || {};
 govie.GovieSession = function () {
     "use strict";
     var viewModel = this,
-        shownPage;
+        shownPage,
+        splashScreenElement = $('.govie-splashscreen'),
+        loginOptionsElement = $('.govie-login-options'),
+        createAccountElement = $('.govie-create-account');
 
     viewModel.ratings = {ratings: ko.observableArray([]), updated: new Date()};
     viewModel.friends = {friends: ko.observableArray([]), updated: new Date()};
@@ -21,12 +24,17 @@ govie.GovieSession = function () {
     }
 
     viewModel.showSplash = function () {
-        loadPage($('.govie-splashscreen'));
+        loadPage(splashScreenElement);
     };
 
-    viewModel.showLogin = function () {
-        loadPage($('.govie-login'));
-        new govie.gui.Login().show();
+    viewModel.showCreateAccount = function () {
+        loadPage(createAccountElement);
+        new govie.gui.CreateAccount().show();
+    };
+
+    viewModel.showLoginOptions = function () {
+        loadPage(loginOptionsElement);
+        new govie.gui.LoginOptions(viewModel.showCreateAccount).show();
     };
 
 };

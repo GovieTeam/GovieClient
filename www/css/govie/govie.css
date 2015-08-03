@@ -41,7 +41,14 @@
     display: none;
 }
 
-.govie-login {
+.govie-login-options {
+    width: 100%;
+    height: 100%;
+    padding-top: 10%;
+    display: none;
+}
+
+.govie-create-account {
     width: 100%;
     height: 100%;
     padding-top: 10%;
@@ -50,11 +57,17 @@
 
 .govie-fill {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 700px;
+    height: 1200px;
 }
 
 .govie-padded {
     padding-top: 30px;
 }
+
+.govie-text-medium {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 18pt;
+}
+
 

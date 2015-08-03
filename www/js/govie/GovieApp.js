@@ -35,7 +35,7 @@ govie.GovieApp = function () {
         } else if (event === 'loading') {
             viewModel.userSession.showSplash();
         } else if (event === 'ready') {
-            viewModel.userSession.showLogin();
+            viewModel.userSession.showLoginOptions();
         }
     };
 
