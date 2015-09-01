@@ -29,12 +29,12 @@ govie.GovieSession = function () {
 
     viewModel.showCreateAccount = function () {
         loadPage(createAccountElement);
-        new govie.gui.CreateAccount().show();
+        new govie.gui.CreateAccount().show(createAccountElement);
     };
 
     viewModel.showLoginOptions = function () {
         loadPage(loginOptionsElement);
-        new govie.gui.LoginOptions(viewModel.showCreateAccount).show();
+        new govie.gui.LoginOptions(viewModel.showCreateAccount).show(loginOptionsElement);
     };
 
 };

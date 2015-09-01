@@ -13,8 +13,8 @@ govie.gui.LoginOptions = function (showCreateAccount) {
         console.log('Login chosen');
     };
 
-    viewModel.show = function () {
-        ko.applyBindings(viewModel, $('.govie-login-options')[0]);
+    viewModel.show = function (element) {
+        ko.applyBindings(viewModel, element[0]);
     };
 
 };

@@ -44,7 +44,6 @@
         <button class="app-ready-button ui-btn-corner-all">App ready</button>
         <button class="got-connection-button ui-btn-corner-all">Got connection</button>
         <button class="lost-connection-button ui-btn-corner-all">Lost connection</button>
-        <a href="http://demos.jquerymobile.com/1.4.5/pages-multi-page/">multpage</a>
     </div>
     <div class="appGui govie-fill">
 
@@ -92,11 +91,65 @@
                 <hr>
             </div>
         </div>
-    </div>
 
-    <div class="container-fluid govie-create-account govie-red">
-        create account
+        <div class="container-fluid govie-create-account">
+            <div class="row govie-header">
+                <div class="row">
+                    <div class="col-xs-3" align="center" data-bind="click: back">
+                        <img src="img/govie_pil_vanster_vit.png" width="50%">
+                    </div>
+                    <div class="col-xs-6" align="center">
+                        <h1 class="govie-text-medium govie-white">Skapa konto</h1>
+                    </div>
+                    <div class="col-xs-3" align="center">
+                        <img src="img/govie_pil_hoger_vit.png" width="50%" data-bind="click: createAccount">
+                    </div>
+                </div>
+            </div>
+            <div class="govie-body">
+                <div class="row">
+                    <div class="col-xs-10">
+                        <input type="text" data-bind="value: email" width="100%">
+                    </div>
+                    <div class="col-xs-2" align="center">
+                        <img src="img/govie_NO_rod.png" width="50%" data-bind="visible: !emailOk()">
+                        <img src="img/govie_OK_gron.png" width="50%" data-bind="visible: emailOk">
+                    </div>
+                </div>
+                <div class="row govie-padded">
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="col-xs-10">
+                        <input type="text" data-bind="value: username" width="100%">
+                    </div>
+                    <div class="col-xs-2" align="center">
+                        <img src="img/govie_NO_rod.png" width="50%" data-bind="visible: !usernameOk()">
+                        <img src="img/govie_OK_gron.png" width="50%" data-bind="visible: usernameOk">
+                    </div>
+                </div>
+                <div class="row govie-padded">
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="col-xs-10">
+                        <input type="password" data-bind="value: password" width="100%">
+                    </div>
+                    <div class="col-xs-2" align="center">
+                        <img src="img/govie_NO_rod.png" width="50%" data-bind="visible: !passwordOk()">
+                        <img src="img/govie_OK_gron.png" width="50%" data-bind="visible: passwordOk">
+                    </div>
+                </div>
+                <div class="row govie-padded govie-red" data-bind="visible: warn" align="center">
+                    passord må være perfekt
+                </div>
+                <div class="row govie-padded" align="center">
+                    Du godkjenner avtalene
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
 </div>
 <!--<script type="text/javascript" src="cordova.js"></script>-->
@@ -115,7 +168,9 @@
 <script type="text/javascript" src="js/govie/network/DataDownloader.js"></script>
 <script type="text/javascript" src="js/govie/gui/Wall.js"></script>
 <script type="text/javascript" src="js/govie/gui/LoginOptions.js"></script>
+<script type="text/javascript" src="js/govie/gui/CreateAccount.js"></script>
 <script type="text/javascript" src="js/govie/domain/User.js"></script>
+
 <script type="text/javascript" src="js/index.js"></script>
 <script type="text/javascript">
     app.initialize();
